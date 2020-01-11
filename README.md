@@ -1,8 +1,6 @@
 # sick-fits
 
 
-<hr/>
-
 # Built With
 
 ![1_z-LROfr9BoiuMhlra-_OZQ](https://user-images.githubusercontent.com/43617894/72209213-e0a5e880-34d1-11ea-85ac-e2694ccd669b.png)
