@@ -105,6 +105,7 @@ const Mutations = {
     }
     // 3. generate the JWT Token
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
+    // console.log(user.id);
     // 4. Set the cookie with the token
     ctx.response.cookie('token', token, {
       httpOnly: true,
