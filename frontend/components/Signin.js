@@ -36,7 +36,8 @@ class Signin extends Component {
             method="post"
             onSubmit={async e => {
               e.preventDefault();
-              await signup();
+              let res = await signup();
+              console.log('res', res)
               this.setState({ name: '', email: '', password: '' });
             }}
           >
