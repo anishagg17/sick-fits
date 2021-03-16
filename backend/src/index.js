@@ -8,7 +8,7 @@ const db = require('./db');
 
 const server = createServer();
 
-if(process.env.NODE_ENV !== 'development'){
+// if(process.env.NODE_ENV !== 'development'){
   server.express.set('trust proxy', 1)
   server.express.use(
       cookieSession({
@@ -20,7 +20,7 @@ if(process.env.NODE_ENV !== 'development'){
         sameSite: 'none'
       })
   );
-}
+// }
 
 server.express.use(cookieParser());
 
