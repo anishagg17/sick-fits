@@ -1,7 +1,7 @@
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 // const cookieSession = require("cookie-session");
-const { shouldSendSameSiteNone } = require('should-send-same-site-none');
+// const { shouldSendSameSiteNone } = require('should-send-same-site-none');
 
 require('dotenv').config({ path: 'variables.env' });
 const createServer = require('./createServer');
@@ -9,7 +9,7 @@ const db = require('./db');
 
 const server = createServer();
 
-server.express.use(shouldSendSameSiteNone);
+// server.express.use(shouldSendSameSiteNone);
 
 // if(process.env.NODE_ENV !== 'development'){
   // server.express.set('trust proxy', 1)
