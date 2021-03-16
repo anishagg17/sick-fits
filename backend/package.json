@@ -26,6 +26,9 @@
     "prisma-binding": "^2.3.16",
     "stripe": "^6.12.1"
   },
+  "resolutions": {
+    "express": "4.17.0"
+  },  
   "license": "MIT",
   "repository": {
     "url": "wesbos.com"
