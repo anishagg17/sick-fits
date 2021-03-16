@@ -1,11 +1,26 @@
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
+const cookieSession = require("cookie-session");
 
 require('dotenv').config({ path: 'variables.env' });
 const createServer = require('./createServer');
 const db = require('./db');
 
 const server = createServer();
+
+if(process.env.NODE_ENV !== 'development'){
+  server.express.set('trust proxy', 1)
+  server.express.use(
+      cookieSession({
+        name: "__session",
+        keys: ["key1"],
+        maxAge: 24 * 60 * 60 * 100,
+        secure: true,
+        httpOnly: true,
+        sameSite: 'none'
+      })
+  );
+}
 
 server.express.use(cookieParser());
 
