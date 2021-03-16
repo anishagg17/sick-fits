@@ -56,7 +56,8 @@ server.start(
   {
     cors: {
       credentials: true,
-      origin: process.env.FRONTEND_URL,
+      origin: 'https://sick-yoga-front.herokuapp.com',
+      // origin: process.env.FRONTEND_URL,
     },
   },
   deets => {
