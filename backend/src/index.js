@@ -2,8 +2,8 @@ const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 // const cookieSession = require("cookie-session");
 // const { shouldSendSameSiteNone } = require('should-send-same-site-none');
-const session = require("express-session");
-const FileStore = require("session-file-store")(session);
+// const session = require("express-session");
+// const FileStore = require("session-file-store")(session);
 
 require('dotenv').config({ path: 'variables.env' });
 const createServer = require('./createServer');
@@ -11,16 +11,16 @@ const db = require('./db');
 
 const server = createServer();
 
-server.express.use(
-  session({
-    secret: "top secret key",
-    sameSite: true,
-    httpOnly: true,
-    store: new FileStore(),
-    saveUninitialized: true,
-    resave: true
-  })
-);
+// server.express.use(
+//   session({
+//     secret: "top secret key",
+//     sameSite: true,
+//     httpOnly: true,
+//     store: new FileStore(),
+//     saveUninitialized: true,
+//     resave: true
+//   })
+// );
 
 // server.express.use(shouldSendSameSiteNone);
 
@@ -69,9 +69,9 @@ server.start(
   {
     cors: {
       credentials: true,
-      origin: 'http://sick-yoga-front.herokuapp.com',
+      // origin: 'http://sick-yoga-front.herokuapp.com',
       // origin: '*',
-      // origin: process.env.FRONTEND_URL,
+      origin: process.env.FRONTEND_URL,
     },
   },
   deets => {
