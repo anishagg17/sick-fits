@@ -1,5 +1,6 @@
 # sick-fits
 
+An online ecommerce-site to facilitate transactions, with stripe checkout and password reset mailing functionality. Major problem that I overcame: Overcame cookie recoil by resolution of obsolete dependencies.
 
 # Built With
 
